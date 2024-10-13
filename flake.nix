@@ -26,6 +26,7 @@
 	  "Yoink" = 457622435;
 	  "Binaural" = 946812450;
 	  "FuzzyTime" = 950297057;
+	  "Hidden Bar" = 1452453066;
 	};
 	# onActivation.cleanup = "zap";
       };
@@ -33,11 +34,16 @@
       environment.systemPackages =
         [ 
 	  pkgs.mkalias
-	  pkgs.neovim
-	  pkgs.wezterm
+	  # pkgs.wezterm # has issue w/ fonts
 	  pkgs.starship
-	  pkgs.obsidian
+	  pkgs.zinit
+	  pkgs.neovim
 	  pkgs.tmux
+	  pkgs.tig
+	  pkgs.obsidian
+	  pkgs.go
+	  pkgs.neofetch
+	  pkgs.ripgrep
         ];
 
       fonts.packages = 
